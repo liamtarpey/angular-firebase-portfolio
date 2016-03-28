@@ -1,7 +1,7 @@
 .global-header {
   @include cf;
-  padding: 40px 0 26px 0;
-  border-bottom: 2px solid $col-green;
+  padding: 40px 0;
+  border-bottom: 4px solid $col-lightgrey;
   position: relative;
   & > div {
     float: left;

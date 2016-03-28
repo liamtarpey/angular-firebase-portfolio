@@ -1,5 +1,4 @@
-var app = angular
-  .module('NewYorkTimes',
+var app = angular.module('portfolio',
   [
     'ngRoute'
   ]

@@ -2,14 +2,17 @@
 
   "theme",
 
+  "mixins/animations",
+  "mixins/helpers",
+  "mixins/breakpoints",
+  "mixins/layout",
+
   "elements/core",
   "elements/forms",
   "elements/typography",
   "elements/images",
 
-  "globals/header",
+  "../components/header/header",
 
-  "../components/search-form/search-form",
-
-  "../views/feed/feed"
+  "../views/home/home"
 ;

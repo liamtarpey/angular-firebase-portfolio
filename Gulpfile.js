@@ -14,6 +14,8 @@ var gulp       = require('gulp'),
       JS_SRC: [
         'node_modules/angular/angular.js',
         'node_modules/angular-route/angular-route.js',
+        // 'node_modules/firebase/lib/firebase-node.js',
+        // 'node_modules/angularfire/dist/angularfire.js',
         'src/apps/angular/app.js',
         'src/apps/angular/constants.js',
         'src/apps/angular/config.js',
@@ -24,6 +26,7 @@ var gulp       = require('gulp'),
       JS_MIN: 'build.min.js',
       JS_BLD: 'dist/js/',
       SASS_SRC: [
+        'src/apps/angular/components/**/*.scss',
         'src/apps/angular/sass/*.scss',
         'src/apps/angular/sass/**/*.scss'
       ],
@@ -46,7 +49,9 @@ var gulp       = require('gulp'),
  */
  gulp.task('clean-assets', function() {
    return del([
-     'index.html'
+     'index.html',
+     'dist/img/',
+     'dist/fonts/'
    ]);
  });
 gulp.task('clean-js', function() {
@@ -73,7 +78,7 @@ gulp.task('js', ['clean-js'], function() {
   gulp.src(path.JS_SRC)
     .pipe(sourcemaps.init())
     .pipe(ngAnnotate())
-    .pipe(plumber())
+    //.pipe(plumber())
     .pipe(concat(path.JS_MIN))
     //.pipe(uglify())
     .pipe(plumber.stop())

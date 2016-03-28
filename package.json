@@ -4,6 +4,8 @@
   "description": "Webapp built with React to retrieve surf reports for popular spots in California",
   "main": "Gulpfile.js",
   "dependencies": {
+    "angularfire": "^1.1.4",
+    "firebase": "^2.4.1",
     "gulp": "^3.9.0"
   },
   "devDependencies": {

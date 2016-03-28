@@ -7,22 +7,14 @@
   font-family: 'NexaBold', arial, sans-serif;
 }
 
-.georgia {
-  font-family: 'georgia';
-}
-
 h1 {
-  &.landing-title {
-    @extend .nexa;
-    color: $col-white;
-    text-transform: uppercase;
-    font-size: 250%;
-    margin-bottom: 0;
-  }
+  @extend .nexa;
+  font-size: 250%;
+  margin-bottom: 0;
 }
 
-h2,h3,h4,h5,h6,p,a {
-  @extend .georgia;
+h2,h3,h4,h5,h6 {
+  @extend .nexa;
 }
 
 h2 {

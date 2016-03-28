@@ -7,7 +7,7 @@
     float: left;
   }
   .header-image {
-    width: 80px;
+    width: 90px;
     img {
       border-radius: 50%;
     }
@@ -16,5 +16,6 @@
     @include centre(y);
     left: 120px;
     width: calc(100% - 120px);
+    padding-top: 14px;
   }
 }

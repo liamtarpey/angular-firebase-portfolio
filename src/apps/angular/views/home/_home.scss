@@ -1,1 +1,22 @@
+#home {
+  padding: 40px 0;
 
+  #skills {
+    .skill-item {
+      margin-bottom: 60px;
+      .skill-images {
+        @include cf;
+        img {
+          float: left;
+          height: 80px;
+          width: auto;
+          display: block;
+          margin-right: 20px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -59,8 +59,3 @@ html {
 	width: 100%;
 	padding: 0 20px;
 }
-
-@mixin font($val) {
-	font-size: $val + px;
-	line-height: ($val * 1.2) + px;
-}

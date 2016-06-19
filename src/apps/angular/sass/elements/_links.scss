@@ -1,0 +1,12 @@
+
+// Default Link Style
+a:not(.no-link-style) {
+  @extend .animation;
+  border-bottom: 3px solid $col-orange;
+  color: $col-orange;
+  text-decoration: none;
+  &:hover {
+    color: darken($col-orange, 10%);
+    border-bottom: 3px solid darken($col-orange, 10%);
+  }
+}

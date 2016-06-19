@@ -14,9 +14,14 @@
   font-family: 'NexaLight', arial, sans-serif;
 }
 
-body, a, p, input, button, select {
+body, p, input, button, select {
   @extend .nexa-light;
   @include font(16);
+}
+
+a {
+  @include font(16);
+  @extend .nexa-bold;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -34,7 +39,7 @@ h2 {
 }
 
 p {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   &.restrict-width {
     max-width: 600px;
   }
@@ -44,4 +49,8 @@ p {
   &.no-mb {
     margin-bottom: 0;
   }
+}
+
+.bold, strong {
+  @extend .nexa-bold;
 }

@@ -1,0 +1,48 @@
+.skills-list {
+  margin-bottom: 40px;
+  #skills {
+    @include cf;
+    .skill-item {
+      margin-bottom: 60px;
+      float: left;
+      margin-right: 20px;
+      .skill-images {
+        @include cf;
+        a {
+          position: relative;
+          display: block;
+          float: left;
+          margin-right: 20px;
+          &:last-child {
+            margin-right: 0;
+          }
+          &:hover {
+            .tooltip {
+              opacity: 1;
+            }
+          }
+
+          // Skill Image
+          img {
+            height: 50px;
+            width: auto;
+            display: block;
+          }
+
+          // Hover tooltip
+          .tooltip {
+            @extend .animation;
+            position: absolute;
+            bottom: -43px;
+            left: 0;
+            background: $col-purple;
+            color: $col-white;
+            padding: 3px 20px;
+            white-space: nowrap;
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -14,8 +14,6 @@ var gulp       = require('gulp'),
       JS_SRC: [
         'node_modules/angular/angular.js',
         'node_modules/angular-route/angular-route.js',
-        // 'node_modules/firebase/lib/firebase-node.js',
-        // 'node_modules/angularfire/dist/angularfire.js',
         'src/apps/angular/app.js',
         'src/apps/angular/constants.js',
         'src/apps/angular/config.js',

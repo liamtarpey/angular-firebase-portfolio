@@ -17,6 +17,7 @@
             margin-right: 0;
           }
           &:hover {
+            cursor: default;
             .tooltip {
               opacity: 1;
             }
@@ -33,13 +34,20 @@
           .tooltip {
             @extend .animation;
             position: absolute;
-            bottom: -43px;
+            bottom: -53px;
             left: 0;
-            background: $col-purple;
+            background: $col-orange;
             color: $col-white;
-            padding: 3px 20px;
+            padding: 3px 30px 0 30px;
             white-space: nowrap;
             opacity: 0;
+            &:before {
+              content: '';
+              @include arrow(7px, 'up', $col-orange);
+              position: absolute;
+              top: -7px;
+              left: 20px;
+            }
           }
         }
       }

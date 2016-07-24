@@ -12,7 +12,7 @@ app.directive('caseStudy', function() {
 function caseStudy(
   $scope
 ) {
-  
+
   var Ctrl = this;
 
   Ctrl.hideCaseStudy = function() {

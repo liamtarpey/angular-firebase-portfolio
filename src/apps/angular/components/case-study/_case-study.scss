@@ -1,0 +1,13 @@
+.case-study-wrapper {
+  .wrapper {
+    position: relative;
+    .back-home {
+      top: -100px;
+      right: 20px;
+      position: absolute;
+    }
+    .case-study-content {
+      padding: 40px 0;
+    }
+  }
+}

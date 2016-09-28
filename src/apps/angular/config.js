@@ -8,7 +8,10 @@ function(
   // Routing
  	$routeProvider
     .when('/', {
-      templateUrl: '/dist/views/feed/feed.html'
+      templateUrl: '/dist/views/home/home.html',
+      controller: 'homeController',
+      controllerAs: 'Ctrl',
+      reloadOnSearch: false
     })
     .otherwise({
       redirectTo: '/404'

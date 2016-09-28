@@ -2,30 +2,55 @@
   font-family: 'NexaBold';
   src:  url('/dist/fonts/nexa_bold.otf');
 }
-
-.nexa {
-  font-family: 'NexaBold', arial, sans-serif;
+@font-face {
+  font-family: 'NexaLight';
+  src:  url('/dist/fonts/nexa_light.otf');
 }
 
-.georgia {
-  font-family: 'georgia';
+.nexa-bold {
+  font-family: 'NexaBold', arial, sans-serif;
+}
+.nexa-light {
+  font-family: 'NexaLight', arial, sans-serif;
+}
+
+body, p, input, button, select {
+  @extend .nexa-light;
+  @include font(16);
+}
+
+a {
+  @include font(16);
+  @extend .nexa-bold;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  @extend .nexa-bold;
 }
 
 h1 {
-  &.landing-title {
-    @extend .nexa;
-    color: $col-white;
-    text-transform: uppercase;
-    font-size: 250%;
-    margin-bottom: 0;
-  }
-}
-
-h2,h3,h4,h5,h6,p,a {
-  @extend .georgia;
+  font-size: 250%;
+  margin-bottom: 0;
 }
 
 h2 {
   @include font(30);
   margin-bottom: 24px;
+}
+
+p {
+  margin-bottom: 20px;
+  &.restrict-width {
+    max-width: 600px;
+  }
+  &.headline {
+    @include font(24);
+  }
+  &.no-mb {
+    margin-bottom: 0;
+  }
+}
+
+.bold, strong {
+  @extend .nexa-bold;
 }

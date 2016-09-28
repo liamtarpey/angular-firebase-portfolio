@@ -1,0 +1,22 @@
+.global-header {
+  @include cf;
+  padding: 40px 0;
+  border-bottom: 4px solid $col-lightgrey;
+  position: relative;
+  & > div {
+    float: left;
+  }
+  .header-image {
+    width: 90px;
+    img {
+      border-radius: 50%;
+      border: 4px solid $col-lightgrey;
+    }
+  }
+  .header-title {
+    @include centre(y);
+    left: 120px;
+    width: calc(100% - 120px);
+    padding-top: 14px;
+  }
+}

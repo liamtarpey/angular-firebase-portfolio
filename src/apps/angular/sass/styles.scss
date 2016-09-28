@@ -2,14 +2,22 @@
 
   "theme",
 
+  "mixins/animations",
+  "mixins/helpers",
+  "mixins/breakpoints",
+  "mixins/layout",
+  "mixins/typography",
+
   "elements/core",
   "elements/forms",
   "elements/typography",
   "elements/images",
+  "elements/helpers",
+  "elements/links",
 
-  "globals/header",
+  "../components/header/header",
+  "../components/skills/skills",
+  "../components/case-study/case-study",
 
-  "../components/search-form/search-form",
-
-  "../views/feed/feed"
+  "../views/home/home"
 ;

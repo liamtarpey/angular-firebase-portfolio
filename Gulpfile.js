@@ -24,6 +24,8 @@ var gulp       = require('gulp'),
       JS_MIN: 'build.min.js',
       JS_BLD: 'dist/js/',
       SASS_SRC: [
+        'src/apps/angular/views/**/*.scss',
+        'src/apps/angular/components/**/*.scss',
         'src/apps/angular/sass/*.scss',
         'src/apps/angular/sass/**/*.scss'
       ],
@@ -35,7 +37,10 @@ var gulp       = require('gulp'),
       JADE_BLD: 'dist/views/',
       INDEX_SRC: 'src/index.html',
       INDEX_BLD: './',
-      IMG_SRC: 'src/apps/angular/img/*',
+      IMG_SRC: [
+        'src/apps/angular/img/*',
+        'src/apps/angular/img/**/*'
+      ],
       IMG_BLD: 'dist/img/',
       FONTS_SRC: 'src/apps/angular/fonts/*',
       FONTS_BLD: 'dist/fonts/'
@@ -46,7 +51,9 @@ var gulp       = require('gulp'),
  */
  gulp.task('clean-assets', function() {
    return del([
-     'index.html'
+     'index.html',
+     'dist/img/',
+     'dist/fonts/'
    ]);
  });
 gulp.task('clean-js', function() {
@@ -73,7 +80,7 @@ gulp.task('js', ['clean-js'], function() {
   gulp.src(path.JS_SRC)
     .pipe(sourcemaps.init())
     .pipe(ngAnnotate())
-    .pipe(plumber())
+    //.pipe(plumber())
     .pipe(concat(path.JS_MIN))
     //.pipe(uglify())
     .pipe(plumber.stop())
@@ -108,7 +115,7 @@ gulp.task('assets', ['clean-assets'], function () {
   gulp.src(path.INDEX_SRC)
     .pipe(gulp.dest(path.INDEX_BLD))
     .pipe(connect.reload());
-  gulp.src([path.IMG_SRC])
+  gulp.src(path.IMG_SRC)
     .pipe(gulp.dest(path.IMG_BLD))
     .pipe(connect.reload());
   gulp.src(path.FONTS_SRC)
